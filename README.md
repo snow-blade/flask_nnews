@@ -1,4 +1,4 @@
-# flask_nnews
+# flask_news
 A simple web app that fetchs and displays news related to linux, open source and android
 
 install the flask module with:
