@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../static/main.css">
+<title></title>
+</head>
+<body>
+<nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-center navbar-brand" href="/"><a class="navbar-brand">Flask news</a></div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+ 
+</nav>
+{% for article in articles  %}
+<article class="media content-section">
+          <div class="media-body"style="align:center;">
+            <div class="article-metadata">
+<img src="{{ article.urlToImage  }}"style="width:150px;height:150px;float:left;"><a href="{{ article.urlToImage }}"></a></img>
+<h3 class="mr-2" href="#" style="float:right;">From {{ article.source.name }} </h3>
+              <h5 class="text-muted">By {{ article.author  }}</h3>
+            </div>
+            <h2><a class="article-title" href="{{ article.url }}">{{ article.title }}</a></h2>
+            <h6 class="article-content">{{ article.content }}</h6>
+            <small class="article-content" style="float: right;">{{ article.publishedAt }}</small>
+          </div>
+        </article>
+{% endfor %}
+<footer class="site-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                    <p class="colophon">Designed by Shadowblade.Open source project for a cgi task, Fedora org </p>
+                </div>
+            </footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
